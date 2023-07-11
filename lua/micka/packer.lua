@@ -81,12 +81,13 @@ return require('packer').startup(function(use)
     -- lsp plugin
     use({
         "nvimdev/lspsaga.nvim",
-        -- ft = {'c', 'cpp', 'lua', 'rust', 'go', 'typescript'},
+        ft = {'c', 'cpp', 'lua', 'rust', 'go', 'typescript'},
         -- opt = true,
-        event = "LspAttach",
+        -- event = "LspAttach",
         -- branch = "main",
         config = function()
             require('lspsaga').setup({
+                -- finder = {keys = {close = 'q', quit = 'k'}}
                 -- server_filetype_map = {typescript = 'typescript', rust = 'rust'},
                 -- -- event = 'BufRead',
                 -- symbol_in_winbar = {
