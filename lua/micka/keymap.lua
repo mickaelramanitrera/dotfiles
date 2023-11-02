@@ -52,34 +52,9 @@ map('n', '<C-q>', ':Bdelete<CR>', {silent = true})
 -- when delete character, do not copy in clipboard
 map('n', 'x', '"_x')
 
--- Telescope open browser at current buffer
--- vim.keymap.set("n", "<leader>e", function()
---   telescope.extensions.file_browser.file_browser({
---     path = "%:p:h",
---     cwd = telescope_buffer_dir(),
---     respect_gitignore = false,
---     hidden = true,
---     grouped = true,
---     initial_mode = "normal",
---   })
--- end)
-
--- Telescope open browser at root folder
--- vim.keymap.set("n", "<C-z>",
---   -- function()
---   "<Cmd>Telescope file_browser<CR>", {noremap = true}
---   -- telescope.extensions.file_browser.file_browser({
---   --   respect_gitignore = false,
---   --   hidden = true,
---   --   grcuped = true,
---   --   initial_mode = "normal",
---   -- })
--- -- end
--- )
-
 -- LspSaga keymaps
 local opts = {noremap = true, silent = true}
-vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+vim.keymap.set('n', '<C-g>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', 'gf', '<Cmd>Lspsaga finder<CR>', opts)
 vim.keymap.set('n', 'gd', '<Cmd>Lspsaga goto_definition<CR>', opts)
@@ -107,3 +82,6 @@ vim.keymap.set('n', "<A-k>", "ddkP", {silent = true})
 -- NeoTree keymaps
 vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', opts)
 vim.keymap.set('n', '<C-e>', '<Cmd>Neotree focus<CR>', opts)
+
+-- floating cmdline
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})

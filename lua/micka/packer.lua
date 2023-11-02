@@ -81,7 +81,8 @@ return require('packer').startup(function(use)
     -- lsp plugin
     use({
         "nvimdev/lspsaga.nvim",
-        ft = {'c', 'cpp', 'lua', 'rust', 'go', 'typescript'},
+        after = 'nvim-lspconfig',
+        -- ft = {'c', 'cpp', 'lua', 'rust', 'go', 'typescript'},
         -- opt = true,
         -- event = "LspAttach",
         -- branch = "main",
@@ -135,4 +136,13 @@ return require('packer').startup(function(use)
     use 'simrat39/rust-tools.nvim'
     -- Debugging
     use 'mfussenegger/nvim-dap'
+    use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
+    use 'theHamsta/nvim-dap-virtual-text'
+    use 'nvim-telescope/telescope-dap.nvim'
+
+    -- folding
+    -- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
+    -- floating cmdline
+    use {'VonHeikemen/fine-cmdline.nvim', requires = {{'MunifTanjim/nui.nvim'}}}
 end)

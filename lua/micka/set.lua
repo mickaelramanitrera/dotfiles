@@ -23,7 +23,7 @@ vim.opt.clipboard:append('unnamedplus')
 
 vim.opt.hidden = true
 
-vim.opt.mouse = a
+vim.opt.mouse = "a"
 
 vim.opt.splitbelow = true
 

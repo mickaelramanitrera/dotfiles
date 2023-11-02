@@ -20,7 +20,8 @@ end
 null_ls.setup({
     debug = false,
     sources = {
-        null_ls.builtins.formatting.prettier,
+        -- null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.eslint,
         null_ls.builtins.formatting.lua_format,
         null_ls.builtins.formatting.rustfmt,
         -- Disabled because it throws errors on projects without eslint
