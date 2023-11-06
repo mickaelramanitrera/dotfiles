@@ -25,10 +25,10 @@ null_ls.setup({
         null_ls.builtins.formatting.lua_format,
         null_ls.builtins.formatting.rustfmt,
         -- Disabled because it throws errors on projects without eslint
-        -- null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.code_actions.eslint
+        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.code_actions.eslint,
         -- Remove this as it conflicts with luasnip snippets and adds double entries
-        -- null_ls.builtins.completion.luasnip
+        null_ls.builtins.completion.luasnip
     },
     on_attach = on_attach
 })
