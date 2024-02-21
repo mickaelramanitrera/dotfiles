@@ -114,18 +114,19 @@
 -- vim.opt.background = "dark"
 -- theme setup and enable
 require('kanagawa').setup({
-    colors = {
-        palette = {
-            springGreen = "#11f063",
-            waveRed = "#E46876",
-            fujiWhite = "#fcfcf7",
-            surimiOrange = "#fc8338",
-            carpYellow = "#e8ca46",
-            autumnGreen = "#519437",
-            waveAqua2 = "#2dc2a4",
-            oniViolet = "#5df2fc"
-        }
+  transparent = true,
+  colors = {
+    palette = {
+      springGreen = "#11f063",
+      waveRed = "#E46876",
+      fujiWhite = "#fcfcf7",
+      surimiOrange = "#fc8338",
+      carpYellow = "#e8ca46",
+      autumnGreen = "#519437",
+      waveAqua2 = "#2dc2a4",
+      oniViolet = "#bf5bf5"
     }
+  }
 })
 vim.cmd.colorscheme "kanagawa-wave"
 -- require("onedark").setup {
